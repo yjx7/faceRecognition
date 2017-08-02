@@ -41,7 +41,9 @@ while 1:
             face = cv2.resize(face, (128,128))
             face = relight(face, random.uniform(0.5, 1.5), random.randint(-50, 50))#重新调亮度
             cv2.imwrite(face_dir+'/'+name+'/'+str(i)+'.jpg', face)
+            cv2.imshow('img',face)
             i+=1
+            
         key = cv2.waitKey(10)
         c = chr(key & 255)
         if c in ['q', 'Q', chr(27)]:
