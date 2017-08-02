@@ -4,7 +4,7 @@ import os
 import sys
 import random
 # 获取分类器
-classifier = cv2.CascadeClassifier('E:/opencv/opencv/sources/data/haarcascades/haarcascade_frontalface_default.xml')
+classifier = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 face_dir = './my_faces'
 if not os.path.exists(face_dir):
     os.makedirs(face_dir)
@@ -29,8 +29,6 @@ def relight(img, alpha=1, bias=0):
                     tmp = 0
                 img[j,i,c] = tmp
     return img
-
-
 i = 1
 while 1:
     if (i <= 10000):
